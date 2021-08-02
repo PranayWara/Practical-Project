@@ -1,0 +1,21 @@
+<html>
+<title> Skin Opener </title>
+<body>
+<h1> Gun Skin Generator </h1>
+
+   <h2> Gun Skin generated below </h2>
+
+<br>
+
+<form action= "{{url_for("main")}}></form>
+    <td><input type="submit" value= "Generate new Skin"></td>
+</form>
+
+<h2> Last Few Rolls </h2>
+    <p>
+        {% for history in rollhistory %}
+        {% endfor %}
+    </p>
+</div>
+</body>
+</html>

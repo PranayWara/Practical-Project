@@ -1,16 +1,15 @@
-from service_2.service2 import Rarity
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
 prices = {
-    'Rarity':{
+    'rarity':{
         'Blue': 0.30,
         'Purple': 1.00,
         'Pink': 5.00,
         'Red': 20.00
     },
-    'Gun':{
+    'gun':{
         'AK-47': 5.00,
         'M4A4': 3.00,
         'AWP': 4.00,
@@ -19,12 +18,14 @@ prices = {
     }
 }
 
-@app.route('/post/order', methods=['POST'])
+@app.route('/post/winnings', methods=['POST'])
 
 def price():
-    Rarity = request.json['Rarity']
-    Guns = request.json['Guns']
+    rarity = request.json['Rarity']
+    guns = request.json['Guns']
 
-    price = prices['Rarity'][Rarity] + prices['Guns'][Guns]
+    price = prices['rarity'][rarity] + prices['guns'][guns]
     
     return jsonify(price)
+
+if __name__=='__main__': app.run(host = "0.0.0.0",port=5000, debug=True)
