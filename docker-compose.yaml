@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+    service_1:
+        image: service_1
+        build: ./service_1
+        ports:
+            - '5000:5000'
+        environment:
+            DATABASE_URI: ${DATABASE_URI}
+        env_file: .env
+    service_2:
+        image: service_2
+        build: ./service_2
+        ports:
+            - '5001:5001'
+    service_3:
+        image: service_3
+        build: ./service_3
+        ports:
+            - '5002:5002'
+    service_4:
+        image: service_4
+        build: ./service_4
+        ports:
+            - '5003:5003'

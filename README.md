@@ -3,17 +3,17 @@
 # Idea
 ## Service 2 
 ### Skin Rarity
-* Blue = £0.3
-* Purple = £1.00
-* Pink = £5.00
-* Red = £20.00
+* Blue = £1
+* Purple = £2
+* Pink = £5
+* Red = £20
 ## Service 3 
 ### Guns
-* AK-47 = £5.00
-* M4A4 = £3.00
-* AWP = £4.00
-* Glock-18 = £1.00
-* USP-S = £2.00
+* AK-47 = £5
+* M4A4 = £3
+* AWP = £4
+* Glock-18 = £1
+* USP-S = £2
 ## Service 4
 ### Price
 * Skin Rarity Price + Gun Price
