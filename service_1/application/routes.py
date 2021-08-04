@@ -4,14 +4,15 @@ import requests
 import datetime
 from application import app, db
 from application.models import history
+from . import app, db
 
 @app.route('/')
 def index():
-    rarity = requests.get('http://rarity:5001/get/rarity').text
-    gun = requests.get('http://gun:5002/get/gun').text
+    rarity = requests.get('http://service_2:5001/get/rarity').text
+    gun = requests.get('http://service_3:5002/get/gun').text
 
     payload = {'rarity':rarity, 'gun':gun}
-    price = requests.get('http://price:5003/post/winnings', json=payload).json()
+    price = requests.get('http://service_4:5003/post/winnings', json=payload).json()
 
     rollhistory = history.query.order_by(desc(history.id)).limit(5).all()
 

@@ -1,6 +1,7 @@
 version: '3.7'
 services:
     service_1:
+        container_name: "service_1"
         image: pranaywara/service_1
         build: ./service_1
         ports:
@@ -8,18 +9,18 @@ services:
         environment:
             DATABASE_URI: ${DATABASE_URI}
         env_file: .env
+        
     service_2:
+        container_name: "service_2"
         image: pranaywara/service_2
         build: ./service_2
-        ports:
-            - '5001:5001'
+
     service_3:
+        container_name: "service_3"
         image: pranaywara/service_3
         build: ./service_3
-        ports:
-            - '5002:5002'
+
     service_4:
+        container_name: "service_4"
         image: pranaywara/service_4
         build: ./service_4
-        ports:
-            - '5003:5003'

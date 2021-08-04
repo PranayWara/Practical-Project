@@ -1,0 +1,5 @@
+all:
+  children:
+    nginx:
+      hosts:
+        load-balancer:
