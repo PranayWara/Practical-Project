@@ -2,8 +2,7 @@ from flask import render_template
 from sqlalchemy import desc
 import requests
 import datetime
-from application import app, db
-from application.models import history
+from models import history
 from . import app, db
 
 @app.route('/')

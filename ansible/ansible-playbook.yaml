@@ -1,9 +1,26 @@
 - hosts: nginx
+  become: true
   tasks:
-  - name: "Ping {{ inventory_hostname }}"
-    ping:
-    register: ping_info
+  - name: Install NGINX
+    apt:
+      name: nginx
+      state: latest
+      update_cache: true
 
-  - name: "Show ping_info in console"
+  - name: Start NGINX Service
+    service:
+      name: nginx
+      state: started
+  - name: Add nginx conf
+    copy:
+      src: nginx.conf
+      dest: /etc/nginx/nginx.conf
+
+  - name: Debugg msg
     debug:
-      msg: "{{ ping_info }}"
+      msg: "Hello from nginx"
+
+  - name: Restart nginx
+    service: 
+      name: nginx
+      state: restarted
