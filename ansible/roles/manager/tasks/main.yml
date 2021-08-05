@@ -1,0 +1,6 @@
+---
+# tasks file for initialise-swarm
+  - name: Initialise Swarm
+    become: true
+    state: Present
+    register: swarm_info

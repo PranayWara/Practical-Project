@@ -1,26 +1,14 @@
-- hosts: nginx
-  become: true
-  tasks:
-  - name: Install NGINX
-    apt:
-      name: nginx
-      state: latest
-      update_cache: true
 
-  - name: Start NGINX Service
-    service:
-      name: nginx
-      state: started
-  - name: Add nginx conf
-    copy:
-      src: nginx.conf
-      dest: /etc/nginx/nginx.conf
+- hosts: load-balancer
+  roles:
+  - nginx
 
-  - name: Debugg msg
-    debug:
-      msg: "Hello from nginx"
+- hosts: swarm-manager
+  roles:
+  - docker
+  - manager
 
-  - name: Restart nginx
-    service: 
-      name: nginx
-      state: restarted
+- hosts: workers
+  roles:
+  - docker
+  - worker

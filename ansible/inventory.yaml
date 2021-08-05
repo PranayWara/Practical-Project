@@ -1,5 +1,11 @@
 all:
+  hosts:
+    load-balancer:
+  
   children:
-    nginx:
+    managers:
       hosts:
-        load-balancer:
+        swarm-manager:
+      workers:
+        hosts:
+          swarm-workers:
