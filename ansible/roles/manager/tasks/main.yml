@@ -2,5 +2,10 @@
 # tasks file for initialise-swarm
   - name: Initialise Swarm
     become: true
-    state: Present
+    docker_swarm:
+      state: present
     register: swarm_info
+
+  - name: debug swarm
+    debug:
+      msg: "{{ swarm_info }}"

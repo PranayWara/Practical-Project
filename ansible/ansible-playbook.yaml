@@ -1,5 +1,6 @@
 
 - hosts: load-balancer
+  become: True
   roles:
   - nginx
 

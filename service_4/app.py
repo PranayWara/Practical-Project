@@ -55,4 +55,4 @@ def post_winnings():
     price = prices['rarity'][rarity] + prices['guns'][guns]
     return jsonify(price)
 
-if __name__=='__main__': app.run(host = "0.0.0.0")
+if __name__=='__main__': app.run(host = "0.0.0.0", port=5004, debug=True)

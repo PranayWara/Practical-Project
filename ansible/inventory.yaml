@@ -1,11 +1,12 @@
-all:
-  hosts:
+all: 
+  hosts: 
     load-balancer:
-  
   children:
     managers:
       hosts:
         swarm-manager:
-      workers:
-        hosts:
-          swarm-workers:
+    workers:
+      hosts:
+        swarm-worker:
+  vars:
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'

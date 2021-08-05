@@ -1,11 +1,14 @@
 version: '3.7'
 services:
+  
     service_1:
         container_name: "service_1"
         image: pranaywara/service_1
         build: ./service_1
         ports:
-            - '5000:5000'
+        - target: 5000
+          published: 5000
+          protocol: tcp
         environment:
             DATABASE_URI: ${DATABASE_URI}
         env_file: .env
@@ -14,13 +17,25 @@ services:
         container_name: "service_2"
         image: pranaywara/service_2
         build: ./service_2
+        ports:
+        - target: 5002
+          published: 5002
+          protocol: tcp
 
     service_3:
         container_name: "service_3"
         image: pranaywara/service_3
         build: ./service_3
+        ports:
+        - target: 5003
+          published: 5003
+          protocol: tcp
 
     service_4:
         container_name: "service_4"
         image: pranaywara/service_4
         build: ./service_4
+        ports:
+        - target: 5004
+          published: 5004
+          protocol: tcp

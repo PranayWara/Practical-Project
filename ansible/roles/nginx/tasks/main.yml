@@ -1,21 +1,18 @@
 ---
 # tasks file for nginx
-  - name: Install NGINX
-    become: True
-    apt:
-      name: nginx
-      state: latest
-      update_cache: True
+- name: Install NGINX
+  apt:
+    name: nginx
+    update_cache: True
 
-  - name: Start NGINX Service
-    become: True
-    service:
-      name: nginx
-      state: started
+- name: Template nginx.conf
+  template:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+  register: ngin_info
 
-  - name: Add nginx conf
-    become: True
-    copy:
-      src: nginx.conf
-      dest: /etc/nginx/nginx.conf
-    notify: 'reload nginx'
+# - name: Restart NGINX
+#   service:
+#     name: nginx
+#     state: restarted
+#   when: nginx_info.changed == true
