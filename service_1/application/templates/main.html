@@ -1,21 +1,33 @@
 <html>
 <title> Skin Opener </title>
-<body>
+<body  style="background-color:rgba(134, 133, 199, 0.575);">
 <h1> Gun Skin Generator </h1>
 
    <h2> Gun Skin generated below </h2>
 
+    <div class="roll">
+        You rolled a {{ history.rarity }} {{ history.gun }} which is worth {{ price }}
+    </div>
 
 <br>
-        {% output %}
-        <br>
-        {% date %}
-
-<h2> Last Few Rolls </h2>
-    <p>
+    <div class="history">
+        <h2> History </h2>
         {% for history in rollhistory %}
+
+            {{ history.rarity }}
+            <br>
+            {{ history.gun }}
+            <br>
+
         {% endfor %}
-    </p>
-</div>
+
+        {% for _ in range(5-records.__len__())}
+        <br>
+        {% endfor %}
+
+
+    </div>
+
+
 </body>
 </html>
