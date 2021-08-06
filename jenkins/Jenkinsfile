@@ -1,0 +1,16 @@
+pipeline{
+    agent any
+    enviroment{
+        DATABASE_URI = credentials("DATABASE_URI")
+        DOCKERHUB_CREDENTIALS= credentials('DOCKERHUB_CREDENTIALS')
+        //-u ${DOCKERHUB_CREDENTIALS_USI} = USERNAME
+        //-p ${DOCKERHUB_CREDENTIALS_PSW} = PASSWORD
+    }
+    stages{
+        stage('Debug'){
+            steps{
+                sh "docker login -u ${DOCKERHUB_CREDENTIALS_USI} -p ${DOCKERHUB_CREDENTIALS_PSW}"
+            }
+        }
+    }
+}

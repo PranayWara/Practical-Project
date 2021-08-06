@@ -10,9 +10,8 @@ services:
           published: 5000
           protocol: tcp
         environment:
-            DATABASE_URI: ${DATABASE_URI}
-        env_file: .env
-        
+            DATABASE_URI: 
+              
     service_2:
         container_name: "service_2"
         image: pranaywara/service_2
