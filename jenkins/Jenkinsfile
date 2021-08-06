@@ -3,8 +3,6 @@ pipeline{
     enviroment{
         DATABASE_URI = credentials("DATABASE_URI")
         DOCKERHUB_CREDENTIALS= credentials('DOCKERHUB_CREDENTIALS')
-        //-u ${DOCKERHUB_CREDENTIALS_USI} = USERNAME
-        //-p ${DOCKERHUB_CREDENTIALS_PSW} = PASSWORD
     }
     stages{
         stage('Debug'){
