@@ -1,7 +1,7 @@
 from flask import url_for
 from flask_testing import TestCase
 
-from service_4.app import app, post_winnings
+from app import app, sp
 
 class TestBase(TestCase):
     def create_app(self):
@@ -11,13 +11,13 @@ class TestResponse(TestBase):
 
     def test_get_rarity(self):
 
-        for rarity in post_winnings['rarity']:
-            for gun in post_winnings['gun']:
+        for rarity in sp['rarity']:
+            for gun in sp['gun']:
 
                 payload = {'rarity':rarity, 'gun':gun}
-                response = self.client.post(url_for('post_winnings'), json=payload)
+                response = self.client.post(url_for('price'), json=payload)
 
                 self.assert200(response)
 
-                expected_price = round(post_winnings['rarity'][rarity] + post_winnings['gun'][gun])
+                expected_price = round(sp['rarity'][rarity] + sp['gun'][gun])
                 self.assertEqual(response.json, expected_price)

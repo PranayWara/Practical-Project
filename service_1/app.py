@@ -1,27 +1,26 @@
 from flask import render_template
 from sqlalchemy import desc
 import requests
-import datetime
 from application.models import history
 from application import app, db
 
-@app.route('/')
+@app.route('/', methods = ['POST','GET'])
 def index():
-    rarity = requests.get('http://service_2:5002/get/rarity').text
-    gun = requests.get('http://service_3:5003/get/gun').text
+    rarity = requests.get('http://service_2:5002/get/rarity').json()
+    gun = requests.get('http://service_3:5003/get/gun').json()
+    # commer = ","
+    # data = rarity + commer + gun
 
-    payload = {'rarity':rarity, 'gun':gun}
-    price = requests.get('http://service_4:5004/post/winnings', json=payload).json()
-
+    price = requests.post('http://service_4:5004/post/winnings', json={"rarity":rarity, "gun":gun}).json()
+    # price_text = price.text
     rollhistory = history.query.order_by(desc(history.id)).limit(5).all()
 
-    storeroll = history(rarity=rarity, gun=gun)
+    storeroll = history(rarity=rarity, gun=gun, price=price)
     db.session.add(storeroll)
     db.session.commit()
 
-    date = datetime(datetime.now().year, datetime.now().month,datetime.now().day)
-    output = f"You rolled a {rarity} and a {gun} for £{price}.\n"
+    
 
-    return render_template("main.html",storeroll = storeroll, rollhistory = rollhistory, date=date, price=price, output = output)
+    return render_template("main.html",storeroll = storeroll, rollhistory = rollhistory)
 
 if __name__=='__main__': app.run(host = "0.0.0.0",port=5000, debug=True)

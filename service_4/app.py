@@ -1,58 +1,33 @@
 from flask import Flask, request, jsonify
-import requests
+
+
 
 app = Flask(__name__)
 
-
-# @app.route('/post/winnings', methods=['POST'])
-
-# def price():
-    # rarity_price = requests.get('http://service_2:5001/get/rarity').text
-    # guns_price = requests.get('http://sercive_3:5002/get/gun').text
-    # if rarity_price == 'Blue':
-    #     rp = 1
-    # elif rarity_price == 'Purple':
-    #     rp = 2
-    # elif rarity_price == 'Pink':
-    #     rp = 5
-    # elif rarity_price == 'Red':
-    #     rp = 20
-    # elif guns_price == 'AK-47':
-    #     gp = 5
-    # elif guns_price == 'M4A4':
-    #     gp = 3
-    # elif guns_price == 'AWP':
-    #     gp = 4
-    # elif guns_price == 'Glock-18':
-    #     gp = 1
-    # elif guns_price == 'USP-S':
-    #     gp = 2
-    # price = rp + gp
-    # return jsonify(price)
-
-prices = {
+sp = {
     'rarity':{
-        'Blue': 0.30,
-        'Purple': 1.00,
-        'Pink': 5.00,
-        'Red': 20.00
+        'Blue': 1,
+        'Purple': 1,
+        'Pink': 5,
+        'Red': 20
     },
     'gun':{
-        'AK-47': 5.00,
-        'M4A4': 3.00,
-        'AWP': 4.00,
-        'Glock-18': 1.00,
-        'USP-S': 2.00,
+        'AK-47': 5,
+        'M4A4': 3,
+        'AWP': 4,
+        'Glock-18': 1,
+        'USP-S': 2,
     }
 }
 
-@app.route('/post/winnings', methods=['POST'])
+@app.route('/post/winnings', methods=['POST','GET'])
 
-def post_winnings():
-    rarity = request.json['Rarity']
-    guns = request.json['Guns']
+def price():
 
-    price = prices['rarity'][rarity] + prices['guns'][guns]
+    rarity = request.get_json()["rarity"]
+    gun = request.get_json()["gun"]
+    price = sp['rarity'][rarity] + sp['gun'][gun]
+
     return jsonify(price)
-
+    
 if __name__=='__main__': app.run(host = "0.0.0.0", port=5004, debug=True)

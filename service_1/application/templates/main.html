@@ -5,17 +5,22 @@
 
    <h2> Gun Skin generated below </h2>
 
+    <div class="new">
+        You rolled a {{ storeroll.rarity }} {{ storeroll.gun }} worth £{{ storeroll.price }}
 
+    </div>
 <br>
-        {% output %}
+       
+    <div class = "history"
+    <h2>Last Few Rolls</h2>
         <br>
-        {% date %}
-
-<h2> Last Few Rolls </h2>
-    <p>
-        {% for history in rollhistory %}
-        {% endfor %}
-    </p>
+                {% for history in rollhistory %}
+                    {{ history.rarity }}
+                    {{ history.gun }}
+                    £{{ history.price }}
+                    <br>
+                {% endfor %}
+            </p>
 </div>
 </body>
 </html>
