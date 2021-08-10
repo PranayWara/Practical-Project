@@ -36,13 +36,3 @@
     - containerd.io
     state: latest
     update_cache: true
-# - name: 'Add user to Dockergroup'
-#   become: true 
-#   user: 
-#     name: jenkins
-#     groups: docker
-#     append: true 
-# - name: 'Install Docker SDK'
-#   become: true
-#   pip:
-#     name: docker-py

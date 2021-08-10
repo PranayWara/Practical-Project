@@ -16,19 +16,13 @@ services:
         container_name: "service_2"
         image: pranaywara/service_2
         build: ./service_2
-        ports:
-        - target: 5002
-          published: 5002
-          protocol: tcp
+
 
     service_3:
         container_name: "service_3"
         image: pranaywara/service_3
         build: ./service_3
-        ports:
-        - target: 5003
-          published: 5003
-          protocol: tcp
+
 
     service_4:
         container_name: "service_4"
