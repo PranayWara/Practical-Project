@@ -8,11 +8,9 @@ from application import app, db
 def index():
     rarity = requests.get('http://service_2:5002/get/rarity').json()
     gun = requests.get('http://service_3:5003/get/gun').json()
-    # commer = ","
-    # data = rarity + commer + gun
 
     price = requests.post('http://service_4:5004/post/winnings', json={"rarity":rarity, "gun":gun}).json()
-    # price_text = price.text
+ 
     rollhistory = history.query.order_by(desc(history.id)).limit(5).all()
 
     storeroll = history(rarity=rarity, gun=gun, price=price)
