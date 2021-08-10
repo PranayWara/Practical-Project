@@ -1,2 +1,5 @@
 ---
 # vars file for nginx
+
+git_repository: https://github.com/PranayWara/Practical-Project
+install_directory: "/opt/Practical-Project"

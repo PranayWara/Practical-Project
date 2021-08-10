@@ -1,18 +1,25 @@
 ---
 # tasks file for nginx
-- name: Install NGINX
+- name: 'install nginx with apt'
+  become: true
   apt:
-    name: nginx
-    update_cache: True
+    pkg:
+    - nginx
+    state: latest
+    update_cache: true
 
-- name: Template nginx.conf
-  template:
+- name: Copy nginx file
+  copy:
     src: nginx.conf
     dest: /etc/nginx/nginx.conf
-  register: ngin_info
+  register: nginx_conf
 
-# - name: Restart NGINX
-#   service:
-#     name: nginx
-#     state: restarted
-#   when: nginx_info.changed == true
+- name: restart is needed
+  service: 
+    name: nginx
+    state: restarted
+  when: nginx_conf.changed == true
+
+- name: debug config
+  debug:
+    msg: "{{ nginx_conf }}"
