@@ -13,6 +13,11 @@
     src: nginx.conf
     dest: /etc/nginx/nginx.conf
   register: nginx_conf
+  
+- name: start nginx 
+  service:
+    name: nginx
+    state: started
 
 - name: restart is needed
   service: 
