@@ -37,5 +37,6 @@ type ansible
 type ansible-playbook
 
 git pull origin main --rebase
-
+sudo usermod -aG docker ${USER}
+newgrp docker
 pip3 install -r requirements.txt
