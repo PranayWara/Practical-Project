@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 sudo apt update
 sudo apt install python3-pip
 
@@ -19,7 +17,7 @@ sudo apt install curl -y
 curl https://get.docker.com | sudo bash
 
 
-docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+docker login -u $DOCKERHUB_CREDENTIALS_URI -p $DOCKERHUB_CREDENTIALS_PWD
 
 
 # Docker-compose

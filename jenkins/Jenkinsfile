@@ -2,6 +2,7 @@ pipeline{
         agent any
         environment{
             DATABASE_URI = credentials("DATABASE_URI")
+            DOCKERHUB_CREDENTIALS = credentials("DOCKERHUB_CREDENTIALS")
         }
         stages{
             stage('Test'){
@@ -12,6 +13,11 @@ pipeline{
             stage('Build'){
                 steps {
                     sh 'bash scripts/build.sh'
+                }
+            }
+            stage('Ansible') {
+                steps {
+                    sh "cd ansible && ansible-playbook -i inventory.yaml ansible-playbook.yaml"
                 }
             }
             stage('Configure'){
