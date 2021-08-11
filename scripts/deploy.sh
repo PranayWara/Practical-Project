@@ -2,9 +2,9 @@
 
 
 # copy over compose yaml to manager 
-scp /home/horri/Practical-Project/docker-compose.yaml jenkins@swarm-manager:/home/jenkins/docker-compose.yaml
+scp ~/.ssh/id_rsa.pub docker-compose.yaml jenkins@swarm-manager:/home/jenkins/docker-compose.yaml
 
 # docker stack deploy
-ssh -i /home/horri/.ssh/id_rsa.pub jenkins@swarm-manager << EOF
+ssh -i ~/.ssh/id_rsa.pub jenkins@swarm-manager << EOF
     docker stack deploy --compose-file docker-compose.yaml skin-opener
 EOF
