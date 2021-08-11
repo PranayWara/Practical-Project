@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+ls
 # copy over compose yaml to manager 
 scp ~/.ssh/id_rsa docker-compose.yaml jenkins@swarm-manager: docker-compose.yaml
 
