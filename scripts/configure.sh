@@ -36,6 +36,6 @@ sudo apt install ansible -y
 type ansible
 type ansible-playbook
 
-git pull
+git pull origin main --rebase
 
 pip3 install -r requirements.txt
