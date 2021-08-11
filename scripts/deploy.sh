@@ -2,7 +2,7 @@
 
 ls
 # copy over compose yaml to manager 
-sudo scp ~/.ssh/id_rsa ${WORKSPACE}/docker-compose.yaml jenkins@swarm-manager:/home/horri
+sudo scp ${WORKSPACE}/docker-compose.yaml jenkins@swarm-manager:/home/horri
 # rsync docker-compose.yaml swarm-manager:
 # docker stack deploy
 
