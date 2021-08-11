@@ -16,7 +16,6 @@ sudo apt-get update
 sudo apt install curl -y
 curl https://get.docker.com | sudo bash
 
-docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSW}
 
 # Docker-compose
 sudo apt update
@@ -39,4 +38,5 @@ type ansible-playbook
 git pull origin main --rebase
 sudo usermod -aG docker ${USER}
 newgrp docker
+docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSW}
 pip3 install -r requirements.txt
