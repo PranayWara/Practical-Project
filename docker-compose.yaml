@@ -28,7 +28,3 @@ services:
         container_name: "service_4"
         image: pranaywara/service_4
         build: ./service_4
-        ports:
-        - target: 5004
-          published: 5004
-          protocol: tcp
