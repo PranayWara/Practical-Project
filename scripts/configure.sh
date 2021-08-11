@@ -17,9 +17,6 @@ sudo apt install curl -y
 curl https://get.docker.com | sudo bash
 
 
-docker login -u {$DOCKERHUB_CREDENTIALS_USR} -p {$DOCKERHUB_CREDENTIALS_PSM}
-
-
 # Docker-compose
 sudo apt update
 sudo apt install -y curl jq
