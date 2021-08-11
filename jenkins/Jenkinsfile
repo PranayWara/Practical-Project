@@ -24,12 +24,7 @@ pipeline{
                 steps {
                     sh 'bash scripts/configure.sh'
                 }
-            } 
-            stage('docker login') {
-                steps {
-                    sh "docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSW}"
-                }
-            }       
+            }    
             stage('Deploy'){
                 steps {
                     sh 'bash scripts/deploy.sh'
