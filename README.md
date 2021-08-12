@@ -82,18 +82,24 @@ Above is my jenkins pipeline which was used for this project.
 
 #### Test
 Testing the app using the test plan above, when all have passed it will move to the next stage.
+Test script can be found [here.](https://github.com/PranayWara/Practical-Project/blob/main/scripts/test.sh)
 
 #### Build
-This will login to docker, then build the images from the test passed app and lastly push the images up to my dockerhub account
+This will login to docker, then build the images from the test passed app and lastly push the images up to my dockerhub account.
+Build script can be found [here.](https://github.com/PranayWara/Practical-Project/blob/main/scripts/build.sh)
+
 
 #### Ansible
 This will configure Nginx on the load-balancer so it can talk to the swarm. On the swarm, it will install docker and if it's a manager it will initialize the swarm and the worker will be added to it.
 
 #### Configure 
 This will install any requirements onto the swarm and make sure all is up to date.
+Configure script can be found [here.](https://github.com/PranayWara/Practical-Project/blob/main/scripts/configure.sh)
 
 #### Deploy
 This will copy the docker-compose.yaml file to the manager and then stack deploy the swarm to fully deploy the application.
+Deploy script can be found [here.](https://github.com/PranayWara/Practical-Project/blob/main/scripts/deploy.sh)
+
 
 ### CICD Pipeline Diagram
 The diagram below shows the full the pipeline of the project.
@@ -125,7 +131,7 @@ I will be using nginx as a load balancer which will tend the user onto a node wh
 Below is how my application would commincate with the backend services.
 ### Service 1
 #### Front-End 
-This is what the user sees when they go onto the page. They will see the rarity, gun and proce diplayed clearly.
+This is what the user sees when they go onto the page. They will see the rarity, gun and price diplayed clearly.
 ### Service 2
 #### Generate Rarity
 Randomly picks a rarity from the list in a text file within the service.
@@ -154,8 +160,18 @@ Testing the app was dne through the pipeline. Service 1 was tested by requests_m
 As its clear the coverage of the entire tests came to 100%.
 
 ## Front End
+![Frontend 1](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/frontend-1.jpg)
 
+Above is how the front end (service 1) looks, it will generate the roll and then show the user the previous rolls.
+
+![Frontend 2](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/frontend-2.jpg)
+
+This screenshot is to show after 1 refresh of the page the roll is stored in the 'Last few rolls'
 
 ## Jenkins Deploy
+Using the deploy script below I am able to deploy the application through Jenkins which means I am able to do rolling updates.
 
 ## Improvement
+* The configure process could've been quicker in jenkins as it had to go through all the installation which took much longer then everything else.
+* Implemented intergration testing using selenium.
+* More intricate testing plan
