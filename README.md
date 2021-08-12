@@ -36,3 +36,11 @@ The app will output the skin rarity and the gun. From these two random inputs a 
 
 ## Risk Assessment 
 ![Risk Assessment](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/risk_assessment_2.jpg)
+
+## Test Plans
+![Test Plans](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/test%20case.jpg)
+
+## Continuous Deployment and Integration
+![Continuous Deployment and Integration](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/jenkins%20pipeline.jpg)
+
+
