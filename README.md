@@ -57,10 +57,15 @@ From all the objective I put them in a seperate epic in Jira
 The design for my stand alone database which inclued the previous rolls of rarity, gun and price
 
 ## Risk Assessment 
+### Initial Risk Assessment
 ![Risk Assessment](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/risk_assessment_2.jpg)
 05/08/2021
 
+### Updated Risk Assessment
+![Updated Risk Assessment](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/risk_assessment_3.jpg)
+12/08/2021
 
+Above is my details risk assessment which will outline the impacts and the level of risk.
 
 ## Components in Detail
 
