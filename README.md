@@ -121,15 +121,20 @@ I will be using nginx as a load balancer which will tend the user onto a node wh
 
 ## Services
 ### Service Diagram 
-
+![Service Diagram](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/service_diagram.jpg)
+Below is how my application would commincate with the backend services.
 ### Service 1
-
+#### Front-End 
+This is what the user sees when they go onto the page. They will see the rarity, gun and proce diplayed clearly.
 ### Service 2
-
+#### Generate Rarity
+Randomly picks a rarity from the list in a text file within the service.
 ### Service 3
-
+#### Generate Gun
+Randomly picks a gun from the list in a text file within the service.
 ### Service 4
-
+#### Price
+Using a post request, the gun and rarity is inputted and service 4 will find the price of both and add them together.
 ## Testing
 
 ## Front End
