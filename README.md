@@ -159,6 +159,12 @@ Testing the app was dne through the pipeline. Service 1 was tested by requests_m
 
 As its clear the coverage of the entire tests came to 100%.
 
+For extra clarity I installed Junit and Cobertura plugin on Jenkins which gave me a helpful graph to show the progress.
+
+![Junit](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/JUNIT.jpg)
+
+![Cobertura](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/cobertura%20report.jpg)
+
 ## Front End
 ![Frontend 1](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/frontend-1.jpg)
 
