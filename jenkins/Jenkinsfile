@@ -8,7 +8,8 @@ pipeline{
             stage('Test'){
                 steps {
                     sh 'bash scripts/test.sh'
-                    junit '**/junit.xml'
+                    junit 'junit.xml'
+                    cobertura 'cobertura.xml'
                 }
             }
             stage('Build'){
