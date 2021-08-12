@@ -37,6 +37,7 @@ The app will output the skin rarity and the gun. From these two random inputs a 
 ## Risk Assessment 
 ![Risk Assessment](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/risk_assessment_2.jpg)
 
+<<<<<<< HEAD
 ## Test Plans
 ![Test Plans](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/test%20case.jpg)
 
@@ -44,3 +45,34 @@ The app will output the skin rarity and the gun. From these two random inputs a 
 ![Continuous Deployment and Integration](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/jenkins%20pipeline.jpg)
 
 
+=======
+## Components in Detail
+
+### Docker
+
+### Docker-Compose
+
+### Docker-Swarm
+
+### Ansible 
+
+### Nginx
+
+## Services
+
+### Service 1
+
+### Service 2
+
+### Service 3
+
+### Service 4
+
+## Testing
+
+## Front End
+
+## Jenkins Deploy
+
+## Improvement
+>>>>>>> 3c434cf8f208df2700cd1623a08c2e71658a962d
