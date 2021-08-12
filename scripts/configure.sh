@@ -34,9 +34,9 @@ sudo apt install ansible -y
 
 type ansible
 type ansible-playbook
-
+cd /Practical-Project
 git pull origin main --rebase
+cd ..
 sudo usermod -aG docker ${USER}
 newgrp docker
-docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSW}
 pip3 install -r requirements.txt
