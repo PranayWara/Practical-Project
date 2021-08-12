@@ -136,6 +136,22 @@ Randomly picks a gun from the list in a text file within the service.
 #### Price
 Using a post request, the gun and rarity is inputted and service 4 will find the price of both and add them together.
 ## Testing
+Testing the app was dne through the pipeline. Service 1 was tested by requests_mock to mock the service 2 and 3 output. From that service 4 is outputted using the mock input. Using this test it allows me to test the app as if its live meaning it can be implamented into the pipeline. 
+### Service 1
+![Service 1 - app.py](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/unit_1_app.jpg)
+
+![Service 1 - application](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/unit_1_application.jpg)
+
+### Service 2
+![Service 2 - application](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/unit_2_app.jpg)
+
+### Service 3
+![Service 3 - application](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/unit_3_app.jpg)
+
+### Service 4
+![Service 4 - application](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/unit_4_app.jpg)
+
+As its clear the coverage of the entire tests came to 100%.
 
 ## Front End
 
