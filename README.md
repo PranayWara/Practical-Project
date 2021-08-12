@@ -67,7 +67,35 @@ The design for my stand alone database which inclued the previous rolls of rarit
 
 Above is my details risk assessment which will outline the impacts and the level of risk.
 
-## Components in Detail
+## Test Plans
+![Test Plan](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/test%20case.jpg)
+
+These are the tests which will show the app is fully functioning and the design of the app is test driven.
+# Continous Deployment and Intergration
+
+## Jenkins Pipline
+![Jenkins Pipline](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/jenkins%20pipeline.jpg)
+
+Above is my jenkins pipeline which was used for this project. 
+
+### The 5 stages are:
+
+#### Test
+Testing the app using the test plan above, when all have passed it will move to the next stage.
+
+#### Build
+This will login to docker, then build the images from the test passed app and lastly push the images up to my dockerhub account
+
+#### Ansible
+This will configure Nginx on the load-balancer so it can talk to the swarm. On the swarm, it will install docker and if it's a manager it will initialize the swarm and the worker will be added to it.
+
+#### Configure 
+This will install any requirements onto the swarm and make sure all is up to date.
+
+#### Deploy
+This will copy the docker-compose.yaml file to the manager and then stack deploy the swarm to fully deploy the application.
+
+# Components in Detail
 
 ### Docker
 
