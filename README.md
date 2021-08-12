@@ -165,6 +165,8 @@ For extra clarity I installed Junit and Cobertura plugin on Jenkins which gave m
 
 ![Cobertura](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/cobertura%20report.jpg)
 
+These reports where added in the test scripts.
+
 ## Front End
 ![Frontend 1](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/frontend-1.jpg)
 
