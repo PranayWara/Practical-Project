@@ -96,18 +96,28 @@ This will install any requirements onto the swarm and make sure all is up to dat
 This will copy the docker-compose.yaml file to the manager and then stack deploy the swarm to fully deploy the application.
 
 ### CICD Pipeline Diagram
+The diagram below shows the full the pipeline of the project.
+![CICD Pipeline](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/CICD%20.jpg)
 
 # Components in Detail
 
 ### Docker
+Docker is a software platform for building applications based on containers and lightweight execution environments that make shared use of the operating system kernel but otherwise run in isolation from one another.
 
 ### Docker-Compose
+Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application's services. Then, with a single command, you create and start all the services from your configuration.
 
 ### Docker-Swarm
+Swarm is a container orchestration tool built into Docker that allows us to run a network of containers across multiple host machines, also known as nodes.
 
 ### Ansible 
+Ansible is an open-source software provisioning, configuration management, and application-deployment tool.
 
 ### Nginx
+Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
+#### Nginx Diagram
+I will be using nginx as a load balancer which will tend the user onto a node which has the least load.
+![Nginx Diagram](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/nginx.jpg)
 
 ## Services
 
