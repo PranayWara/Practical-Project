@@ -175,3 +175,10 @@ Using the deploy script below I am able to deploy the application through Jenkin
 * The configure process could've been quicker in jenkins as it had to go through all the installation which took much longer then everything else.
 * Implemented intergration testing using selenium.
 * More intricate testing plan
+
+### Author
+#### Pranay Wara 
+
+### Acknowledgements
+* Ruan Wright
+* Oliver Nichols

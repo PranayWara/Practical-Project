@@ -8,6 +8,7 @@ pipeline{
             stage('Test'){
                 steps {
                     sh 'bash scripts/test.sh'
+                    junit 'scr/reports/*-junit.xml'
                 }
             }
             stage('Build'){
