@@ -1,6 +1,20 @@
 # Practical-Project
+## Ojective
+To create a service-orientated architecture for your application, this application must be composed of at least 4 services that work together.
 
-# Idea - Gun Skin Opener
+The following constraints were also set:
+
+* Kanban Board: Jira
+* Version Control: Git - using the feature-branch model
+* CI Server: Jenkins
+* Configuration Management: Ansible
+* Cloud server: GCP virtual machines
+* Containerisation: Docker
+* Orchestration Tool: Docker Swarm
+* Reverse Proxy: NGINX
+* Database Layer: MySQL
+
+## Idea - Gun Skin Opener
 The app will output the skin rarity and the gun. From these two random inputs a price will be outputted. Service 1 or my front end will display these outputs and the last five rolls.
 ## Service 1
 ### Front End
@@ -8,19 +22,21 @@ The app will output the skin rarity and the gun. From these two random inputs a 
 * Show last 5 rolls
 ## Service 2 
 ### Skin Rarity
+Gnerate a random rarity from a text file in the service
+## Service 3 
+### Guns
+Gnerate a random gun from a text file in the service
+### Price
 * Blue = £1
 * Purple = £2
 * Pink = £5
 * Red = £20
-## Service 3 
-### Guns
 * AK-47 = £5
 * M4A4 = £3
 * AWP = £4
 * Glock-18 = £1
 * USP-S = £2
 ## Service 4
-### Price
 * Skin Rarity Price + Gun Price
 
 # Planning 
@@ -28,24 +44,24 @@ The app will output the skin rarity and the gun. From these two random inputs a 
 ## User Stories
 ![User Stories](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/user%20stories.jpg)
 
+Above is my kanban user stories which gave me a visual and easy way to set out my user requirements
+
 ## Project Requirements
 ![Project Requirements](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/project%20requiements.jpg)
+
+From all the objective I put them in a seperate epic in Jira
 
 ## Database Design
 ![ERD](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/ERD.jpg)
 
+The design for my stand alone database which inclued the previous rolls of rarity, gun and price
+
 ## Risk Assessment 
 ![Risk Assessment](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/risk_assessment_2.jpg)
-
-<<<<<<< HEAD
-## Test Plans
-![Test Plans](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/test%20case.jpg)
-
-## Continuous Deployment and Integration
-![Continuous Deployment and Integration](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/jenkins%20pipeline.jpg)
+05/08/2021
 
 
-=======
+
 ## Components in Detail
 
 ### Docker
@@ -75,4 +91,3 @@ The app will output the skin rarity and the gun. From these two random inputs a 
 ## Jenkins Deploy
 
 ## Improvement
->>>>>>> 3c434cf8f208df2700cd1623a08c2e71658a962d
