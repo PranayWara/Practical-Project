@@ -95,6 +95,8 @@ This will install any requirements onto the swarm and make sure all is up to dat
 #### Deploy
 This will copy the docker-compose.yaml file to the manager and then stack deploy the swarm to fully deploy the application.
 
+### CICD Pipeline Diagram
+
 # Components in Detail
 
 ### Docker
