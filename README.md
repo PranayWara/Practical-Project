@@ -120,6 +120,7 @@ I will be using nginx as a load balancer which will tend the user onto a node wh
 ![Nginx Diagram](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/nginx.jpg)
 
 ## Services
+### Service Diagram 
 
 ### Service 1
 
