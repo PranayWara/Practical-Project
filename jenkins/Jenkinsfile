@@ -9,7 +9,7 @@ pipeline{
                 steps {
                     sh 'bash scripts/test.sh'
                     junit 'junit.xml'
-                    cobertura 'cobertura.xml'
+                    cobertura coberturaReportFile: 'coverage.xml'
                 }
             }
             stage('Build'){
