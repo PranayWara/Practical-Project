@@ -123,7 +123,7 @@ Ansible is an open-source software provisioning, configuration management, and a
 Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
 #### Nginx Diagram
 I will be using nginx as a load balancer which will tend the user onto a node which has the least load.
-![Nginx Diagram](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/nginx.jpg)
+![Nginx Diagram](https://raw.githubusercontent.com/PranayWara/Practical-Project/main/Images/nginx2.jpg)
 
 ## Services
 ### Service Diagram 
