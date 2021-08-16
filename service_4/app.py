@@ -6,17 +6,16 @@ app = Flask(__name__)
 
 sp = {
     'rarity':{
-        'Blue': 1,
-        'Purple': 1,
-        'Pink': 5,
-        'Red': 20
+        'Hat': 1,
+        'T-shirt': 1,
+        'Jumper': 5,
+        'Shorts': 20
     },
     'gun':{
-        'AK-47': 5,
-        'M4A4': 3,
-        'AWP': 4,
-        'Glock-18': 1,
-        'USP-S': 2,
+        'Jordan': 5,
+        'Nike': 3,
+        'Adidas': 4,
+        'Puma': 1,
     }
 }
 
